@@ -17,4 +17,7 @@ public sealed class WorkoutExerciseDto
     public int OrderIndex { get; set; }
     public string Title { get; set; } = default!;
     public string ThumbnailUrl { get; set; } = default!;
+
+    public int TotalSets { get; set; }
+    public int? RepetitionsPerSet { get; set; }
 }

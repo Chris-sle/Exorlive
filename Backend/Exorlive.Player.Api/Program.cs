@@ -65,13 +65,19 @@ app.MapGet("/api/workouts/{id:int}",
         WHERE Id = @Id;
         """;
 
+        // Henter øvelser + aggregerer sett og reps
         const string exercisesSql = """
-        SELECT we.OrderIndex,
-               e.Id,
-               e.Title
+        SELECT 
+            we.OrderIndex,
+            e.Id AS ExerciseId,
+            e.Title,
+            COUNT(es.Id)           AS TotalSets,
+            MIN(es.Repetitions)    AS RepetitionsPerSet
         FROM WorkoutExercises we
         JOIN Exercises e ON we.ExerciseId = e.Id
+        LEFT JOIN ExerciseSets es ON es.ExerciseId = e.Id
         WHERE we.WorkoutId = @Id
+        GROUP BY we.OrderIndex, e.Id, e.Title
         ORDER BY we.OrderIndex;
         """;
 
@@ -89,10 +95,14 @@ app.MapGet("/api/workouts/{id:int}",
             Duration = workoutRow.Duration,
             Exercises = exerciseRows.Select(er => new WorkoutExerciseDto
             {
-                ExerciseId = er.Id,
-                OrderIndex = er.OrderIndex,
-                Title = er.Title,
-                ThumbnailUrl = $"/api/exercises/{er.Id}/thumbnail"
+                ExerciseId = (int)er.ExerciseId,
+                OrderIndex = (int)er.OrderIndex,
+                Title = (string)er.Title,
+                ThumbnailUrl = $"/api/exercises/{(int)er.ExerciseId}/thumbnail",
+                TotalSets = (int)er.TotalSets,
+                RepetitionsPerSet = er.RepetitionsPerSet == null
+            ? null
+            : (int?)er.RepetitionsPerSet
             }).ToList()
         };
 

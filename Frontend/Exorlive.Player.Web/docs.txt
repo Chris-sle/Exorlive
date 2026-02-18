@@ -1,0 +1,73 @@
+vulnerabilities Report:
+
+A:\Kode Prosjekter\Exorlive\Frontend\Exorlive.Player.Web>npm install
+
+up to date, audited 178 packages in 2s
+
+46 packages are looking for funding
+  run `npm fund` for details
+
+10 moderate severity vulnerabilities
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+
+A:\Kode Prosjekter\Exorlive\Frontend\Exorlive.Player.Web>npm audit
+# npm audit report
+
+ajv  <8.18.0
+Severity: moderate
+ajv has ReDoS when using `$data` option - https://github.com/advisories/GHSA-2g4f-4pwh-qvx6
+fix available via `npm audit fix --force`
+Will install typescript-eslint@8.14.0, which is a breaking change
+node_modules/ajv
+  @eslint/eslintrc  *
+  Depends on vulnerable versions of ajv
+  node_modules/@eslint/eslintrc
+    eslint  >=4.2.0
+    Depends on vulnerable versions of @eslint-community/eslint-utils
+    Depends on vulnerable versions of @eslint/eslintrc
+    Depends on vulnerable versions of ajv
+    node_modules/eslint
+      @eslint-community/eslint-utils  *
+      Depends on vulnerable versions of eslint
+      node_modules/@eslint-community/eslint-utils
+        @typescript-eslint/utils  *
+        Depends on vulnerable versions of @eslint-community/eslint-utils
+        Depends on vulnerable versions of eslint
+        node_modules/@typescript-eslint/utils
+          @typescript-eslint/eslint-plugin  *
+          Depends on vulnerable versions of @typescript-eslint/parser
+          Depends on vulnerable versions of @typescript-eslint/type-utils
+          Depends on vulnerable versions of @typescript-eslint/utils
+          Depends on vulnerable versions of eslint
+          node_modules/@typescript-eslint/eslint-plugin
+            typescript-eslint  *
+            Depends on vulnerable versions of @typescript-eslint/eslint-plugin
+            Depends on vulnerable versions of @typescript-eslint/parser
+            Depends on vulnerable versions of @typescript-eslint/utils
+            Depends on vulnerable versions of eslint
+            node_modules/typescript-eslint
+          @typescript-eslint/type-utils  >=5.9.2-alpha.0
+          Depends on vulnerable versions of @typescript-eslint/utils
+          Depends on vulnerable versions of eslint
+          node_modules/@typescript-eslint/type-utils
+      @typescript-eslint/parser  *
+      Depends on vulnerable versions of eslint
+      node_modules/@typescript-eslint/parser
+      eslint-plugin-react-refresh  *
+      Depends on vulnerable versions of eslint
+      node_modules/eslint-plugin-react-refresh
+
+10 moderate severity vulnerabilities
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
