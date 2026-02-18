@@ -1,0 +1,29 @@
+1. 
+Sett deg inn i produktene våre.
+   - ExorLive Main - Dette er verktøyet til en fagperson. Her lager man treningsprogrammer.
+   - ExorLive Go - Dette er for utøveren som mottar treningsprogrammet. Her kan man se hva man skal trene. Man kan ha økter i en kalender og registrere sin trening.
+
+En bruker av Main kaller vi "Instruktør".
+En bruker av Go kaller vi "Kontakt" eller "Kontakt med Login".
+
+2.  
+På hjemmesiden vår, trykk "Prøv Gratis" og få en 14 dagers tilgang til systemet. Dette heter "demo-lisens".
+Da vil du først komme til ExorLive Main. Her kan du lage treningsprogrammer. Prøv ut dette og bli kjent.  Om ønskelig, send meg en melding, så kan jeg oppgradere deg til en full-lisens.
+
+3. 
+Invitér så deg selv (bruk en annen email-adresse, f.eks med gmail "+"-trikset) til ExorLive Go og prøv ut denne også.
+
+4.
+Dagens Main og GO er skrevet i et gammelt javascript rammeverk, og vi trenger en ny React frontend på dette.
+Her kommer oppgaven din. Har du gjort punkt 1-3 burde du være godt rustet.
+Lag en enkel prototype på en ExorLive øvelses-avspiller. Vi kaller det "Player".
+Det skal være database (mySQL e.l.), backend (C#) og frontend (React).
+
+Man skal få opp en liste med øvelser og skal kunne åpne en  øvelse og se detaljer på den og spille av video.
+Du kan f.eks laste ned videoene du finner i ExorLive eller andre øvelsesvideoer du finner.
+Det skal være en god brukeropplevelse. Du kan gjerne legge til litt kreativitet om du ønsker.
+
+Du kan bruke de verktøy og hjelpemidler du vil, men det skal være ditt verk.
+Når vi møtes igjen går vi igjennom dette og diskuterer koden. Kjenn derfor koden godt. Unngå "det er AI som har skrevet denne koden så jeg er litt usikker på hva som foregår her..."
+
+Vi kommer til å fokusere mest på frontenden.
