@@ -1,0 +1,6 @@
+@Exorlive.Player.Api_HostAddress = http://localhost:5244
+
+GET {{Exorlive.Player.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
