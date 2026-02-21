@@ -1,0 +1,229 @@
+/* options-menu */
+.options-wrapper {
+  position: relative;
+}
+
+.options-menu {
+  position: absolute;
+  right: 0;
+  top: 120%;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+  padding: 0.4rem 0;
+  min-width: 180px;
+  z-index: 20;
+}
+
+.options-item {
+  width: 100%;
+  padding: 0.45rem 0.9rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.options-item + .options-item {
+  border-top: 1px solid #eee;
+}
+
+/* header-tekst + meta */
+
+.workout-header {
+  padding: 0.8rem 1rem 0.5rem;
+  border-bottom: 1px solid var(--grey-border);
+}
+
+.workout-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.workout-description {
+  font-size: 0.85rem;
+  color: var(--grey-text);
+  margin: 0;
+}
+
+.link-button {
+  margin-top: 0.15rem;
+  border: none;
+  background: transparent;
+  color: var(--dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* linje med dato / starttid / varighet */
+
+.workout-meta-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+
+.meta-box {
+  flex: 1;
+  font-size: 0.75rem;
+}
+
+.meta-label {
+  color: var(--grey-text);
+}
+
+.meta-value {
+  font-weight: 600;
+  margin-top: 0.1rem;
+}
+
+/* Øvelsesliste */
+
+.exercise-list {
+  padding: 0.75rem 0 4.5rem;
+}
+
+.exercise-row {
+  display: flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  background: var(--bg-row);
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.exercise-radio-wrapper input {
+  display: none;
+}
+
+.exercise-radio-visual {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #c7c7c7;
+  display: inline-block;
+}
+
+.exercise-radio-wrapper input:checked + .exercise-radio-visual {
+  background: #ff9600;
+  border-color: #ff9600;
+}
+
+.exercise-thumb {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 0.6rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.exercise-info {
+  flex: 1;
+}
+
+.exercise-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.exercise-meta {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--grey-text);
+}
+
+.more-button {
+  font-size: 1.2rem;
+}
+
+/* footer */
+
+.workout-footer {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 1rem;
+  background: #ffffff;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.flat-button,
+.primary-button {
+  border-radius: 999px;
+  padding: 0.55rem 1.3rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  cursor: pointer;
+}
+
+.flat-button {
+  background: transparent;
+  color: var(--dark);
+}
+
+.primary-button {
+  background: var(--dark);
+  color: #fff;
+}
+
+/* dialog "alert" */
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.dialog {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  max-width: 320px;
+  width: 80%;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.dialog h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.dialog p {
+  font-size: 0.9rem;
+  margin: 0 0 0.9rem;
+}
+
+.dialog-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.dialog-buttons button {
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.dialog-buttons .primary-button {
+  border: none;
+  background: #ff9600;
+  color: #fff;
+}
