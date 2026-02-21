@@ -16,9 +16,9 @@ const WorkoutPage = () => {
     const navigate = useNavigate();
 
     const {
-        queue,
+        //queue,
         setQueue,
-        currentIndex,
+        //currentIndex,
         setCurrentIndex,
         completedIds,
         toggleCompleted,
