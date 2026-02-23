@@ -80,8 +80,9 @@ const WorkoutPage = () => {
             if (!allCompleted) {
                 setShowFinishDialog(true);
             } else {
-                // alle ferdig – her kan man evt. vise "økten er fullført"
+                // alle ferdig – her kan man evt. navigere til evalurings side eller lignende
                 // for nå gjør jeg ingenting her
+                alert("Fullfør: ikke implementert ennå");
             }
         }
     };

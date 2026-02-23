@@ -42,6 +42,7 @@ export const WorkoutPlayerProvider = ({ children }: { children: ReactNode }) => 
 
     const toggleCompleted = (id: number) => {
         setCompletedIds((prev) =>
+            // hvis id allerede er i completedIds, fjern det, ellers legg det til
             prev.includes(id) ? prev.filter((x) => x !== id) : [...prev, id]
         );
     };
